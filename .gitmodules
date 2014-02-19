@@ -1,0 +1,3 @@
+[submodule "ext/hive-dependency-parser"]
+	path = ext/hive-dependency-parser
+	url = git@github.com:ojima-h/hive-dependency-parser.git
