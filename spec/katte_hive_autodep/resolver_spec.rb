@@ -5,10 +5,8 @@ module KatteHiveAutodep
 
       node_factory = Katte::Recipe::NodeFactory.new
       @node_collection = Katte::Node::Collection.new
-      @node_collection << node_factory.create(name: 'one', path: File.join(queries_root, 'a.sql'), file_type: Katte::Plugins::FileType.find('sql'))
-      @node_collection << node_factory.create(name: 'two', path: File.join(queries_root, 'b.sql'), file_type: Katte::Plugins::FileType.find('sql'))
-
-      Katte::Runner.after(:load_all, &Resolver.method(:call))
+      @node_collection << node_factory.create(name: 'one', path: File.join(queries_root, 'one.sql'), file_type: Katte::Plugins::FileType.find('sql'))
+      @node_collection << node_factory.create(name: 'two', path: File.join(queries_root, 'two.sql'), file_type: Katte::Plugins::FileType.find('sql'))
     end
 
     describe "#resolve" do

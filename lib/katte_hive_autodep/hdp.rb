@@ -5,7 +5,7 @@ module KatteHiveAutodep
     # wrapper class for hive-dependency-parser
 
     EXT_LIB_ROOT   = File.expand_path("../../ext/", __FILE__)
-    ENV_SCRIPT     = File.join(EXT_LIB_ROOT, "env.sh")
+    ENV_SCRIPT     = File.join(EXT_LIB_ROOT, (ENV["KATTE_MODE"] == 'test' ? "env-debug.sh" : "env.sh"))
     HDP_JAR        = File.join(EXT_LIB_ROOT, "hive-dependency-parser.jar")
     HDP_MAIN_CLASS = "org.mixi.analysis.hive.dependency.parser.Driver"
 

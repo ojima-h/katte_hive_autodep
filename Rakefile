@@ -17,7 +17,7 @@ namespace :hdp do
       "CLASSPATH=" + r.to_a.map(&:chomp).join(":")
     end
 
-    File.open("lib/ext/env.sh", 'w') {|f| f.write jars}
+    File.open("lib/ext/env-debug.sh", 'w') {|f| f.write jars}
   end
 
   desc "build hive-dependency-parser"
